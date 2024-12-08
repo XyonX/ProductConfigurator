@@ -1,12 +1,17 @@
 import { useState } from "react";
+import { Canvas } from "@react-three/fiber";
 import "./App.css";
+import Experience from "./components/Experience";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div className="App">hello</div>
+      <div className="App">
+        <Canvas>
+          <color attach="background" args={["#213547"]} />
+          <Experience></Experience>
+        </Canvas>
+      </div>
     </>
   );
 }
